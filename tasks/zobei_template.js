@@ -12,7 +12,6 @@ module.exports = function(grunt) {
 	// creation: http://gruntjs.com/creating-tasks
 
 	grunt.registerMultiTask('zobei_template', 'template compile', function() {
-		grunt.log.writeln(this.target + ': ' + this.data.files['test/test.js']);
 		grunt.file.defaultEncoding = 'utf8';
 		var files = this.data.files;
 		var os = require('os');

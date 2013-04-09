@@ -26,7 +26,7 @@ In your project's Gruntfile, add a section named `zobei_template` to the data ob
 grunt.initConfig({
   zobei_template: {
     your_target: {
-      // Target-specific file lists and/or options go here.
+      // Target-specific file lists go here.
     },
   },
 })
