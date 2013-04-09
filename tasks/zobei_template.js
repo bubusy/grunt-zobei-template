@@ -17,12 +17,10 @@ module.exports = function(grunt) {
 		var os = require('os');
 		var reg = new RegExp(os.EOL, 'g');
 		for (var f in files) {
-			grunt.log.writeln(f + ': ' + files[f]);
 			var tpl = grunt.file.read(files[f]);
 			tpl = tpl.replace(reg, '\\n');
 			tpl = tpl.replace(/"/g, '\\"');
 			tpl = 'define([], function(){\n return {"template":"' + tpl + '"};\n});';
-			grunt.log.writeln(tpl);
 			grunt.file.write(f, tpl);		}
 
 	});
