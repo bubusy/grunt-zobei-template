@@ -21,8 +21,8 @@ module.exports = function(grunt) {
 			tpl = tpl.replace(reg, '\\n');
 			tpl = tpl.replace(/"/g, '\\"');
 			tpl = 'define([], function(){\n return {"template":"' + tpl + '"};\n});';
-			grunt.file.write(f, tpl);		}
-
+			grunt.file.write(f, tpl);
+			grunt.log.writeln('File ' + f.cyan + ' created.');		}
 	});
 
 };
